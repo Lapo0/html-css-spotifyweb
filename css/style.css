@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+    width: 100%;
+}
+
+ul,
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --darkgray: #080B12;
+    --littledarkgray: #141922;
+    --grayplayer: #282828;
+    --graytext: #6F6F6F;
+}
+
+/**********************************
+DIVISIONE MACRO-LAYOUT
+**********************************/
+
+.top-big-container{
+    display: flex;
+    height: calc(100vh - 90px);
+}
+
+.footer{
+    background-color: var(--grayplayer);
+    height: 90px;
+}
+
+.header{
+    width: 200px;
+    flex-shrink: 0;
+    background-color: black;
+}
+
+.main{
+    background-color: var(--graytext);
+    flex-grow: 1;
+}
+
+.container-upgrade{
+    height: 90px;
+    background-color: var(--darkgray);
+}
