@@ -26,6 +26,14 @@ a {
     --graytext: #6F6F6F;
 }
 
+.graytext{
+    color: var(--graytext);
+}
+
+.row{
+    display: flex;
+}
+
 /**********************************
 DIVISIONE MACRO-LAYOUT
 **********************************/
@@ -60,4 +68,31 @@ DIVISIONE MACRO-LAYOUT
     .header{
         width: 50px;
     }
+}
+
+/**********************************
+FOOTER PLAYER
+**********************************/
+
+.player .row{
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.player_type-of-song .type-of-song_img{
+    margin-right: 12px;
+}
+
+.player_type-of-song .type-of-song_img img{
+    height: 42px;
+    width: 42px;
+}
+
+.player_type-of-song .type-of-song_icon{
+    margin-left: 35px;
+}
+
+.player_type-of-song .type-of-song_icon >*{
+    padding: 5px;
 }
