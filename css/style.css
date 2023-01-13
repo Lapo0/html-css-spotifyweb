@@ -201,6 +201,38 @@ HEADER SIDE BAR
     margin: 20px;
 }
 
+.top-side-bar .header_nav ul{
+    flex-direction: column;
+}
+
+.header_nav .row .row{
+    align-items: center;
+    padding: 2px 0;
+}
+
+.header_nav .yellow-bar{
+    margin-right: 20px;
+    height: 30px;
+    background-color: yellow;
+    width: 2px;
+}
+ .nav_text i{
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.nav_cerca,
+.nav_libreria {
+    color: var(--graytext);
+}
+
+.nav_cerca .yellow-bar,
+.nav_libreria .yellow-bar{
+    background-color: black;
+}
+
+
+
 
 @media screen and (max-width: 900px) {
     .impostation-song_time .time-bar{
