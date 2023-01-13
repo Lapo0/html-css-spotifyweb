@@ -231,8 +231,88 @@ HEADER SIDE BAR
     background-color: black;
 }
 
+.header_playlist .playlist{
+    padding: 22px;
+}
 
+.header_playlist .playlist h3{
+    padding-bottom: 10px;
+    font-size: 14px;
+}
 
+.header_playlist .playlist .playlist_nome{
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.playlist .row{
+    flex-direction: column;
+}
+
+.playlist_crea .row{
+    flex-direction: row;
+    align-items: center;
+}
+
+.playlist_crea .plus-square{
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    position: relative;
+    margin-right: 8px;
+    background-color: #909090;
+}
+
+.playlist_crea .plus-square i{
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottom-side-bar{
+    padding: 0 22px;
+}
+
+.bottom-side-bar .side_bar_download .arrow-circle{
+    width: 12px;
+    height: 12px;
+    border: 1px solid var(--graytext);
+    font-size: 8px;
+    padding: 6px;
+    position: relative;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.side_bar_download .row{
+    align-items: center;
+}
+
+.bottom-side-bar .side_bar_download .arrow-circle i{
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--graytext);
+}
+
+.bottom-side-bar .side_bar_download p{
+    font-size: 14px;
+}
+
+.bottom-side-bar .side_bar_download::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: var(--graytext);
+    width: 100%;
+    margin-right: 22px;
+    margin: 6px 0 10px 0;
+}
 
 @media screen and (max-width: 900px) {
     .impostation-song_time .time-bar{
