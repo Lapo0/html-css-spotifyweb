@@ -34,6 +34,7 @@ a {
     display: flex;
 }
 
+
 /**********************************
 DIVISIONE MACRO-LAYOUT
 **********************************/
@@ -55,7 +56,7 @@ DIVISIONE MACRO-LAYOUT
 }
 
 .main{
-    background-color: var(--graytext);
+    background-color: var(--littledarkgray);
     flex-grow: 1;
 }
 
@@ -217,9 +218,10 @@ HEADER SIDE BAR
 .header_nav .yellow-bar{
     margin-right: 20px;
     height: 30px;
-    background-color: yellow;
-    width: 2px;
+    background-color: yellowgreen;
+    width: 1.5px;
 }
+
  .nav_text i{
     padding-right: 10px;
     font-size: 20px;
@@ -228,11 +230,6 @@ HEADER SIDE BAR
 .nav_cerca,
 .nav_libreria {
     color: var(--graytext);
-}
-
-.nav_cerca .yellow-bar,
-.nav_libreria .yellow-bar{
-    background-color: black;
 }
 
 .header_playlist .playlist{
@@ -367,11 +364,51 @@ MAIN UPGRADE
     border-radius: 25px;
 }
 
+/**********************************
+MAIN CONTENT
+**********************************/
+
+.container-content {
+    color: white;
+}
+
+.container-content .nav_content>.row{
+    justify-content: center;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.container-content .nav_content .nav-bar.row{
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-content .nav_content .row li{
+    padding: 0 10px;
+}
+
+.nav_content .nav-bar .yellow-bar{
+    margin-top: 2px;
+    height: 1.5px;
+    background-color: yellowgreen;
+    width: 30px;
+}
 
 
 /**********************************
 MEDIA QUERY
 **********************************/
+
+
+.nav_cerca .yellow-bar,
+.nav_libreria .yellow-bar{
+    background-color: black;
+}
+
+.nav_content .none.yellow-bar{
+    background-color: var(--littledarkgray);
+}
 
 
 @media screen and (max-width: 900px) {
