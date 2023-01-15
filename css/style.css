@@ -20,7 +20,7 @@ a {
 }
 
 :root{
-    --darkgray: #080B12;
+    --darkgray: rgba(8, 11, 18, 0.9);
     --littledarkgray: #141922;
     --grayplayer: #282828;
     --graytext: #6F6F6F;
@@ -64,6 +64,31 @@ DIVISIONE MACRO-LAYOUT
     height: 90px;
     background-color: var(--darkgray);
 }
+
+/**********************************
+HOVER EFFECT
+**********************************/
+
+.container_hover_yellow-bar:hover .yellow-bar{
+    background-color: yellowgreen;
+}
+
+.nav-bar:hover .yellow-bar{
+    background-color: yellowgreen;
+}
+
+
+a .graytext:hover{
+    color: white;
+}
+
+.gray-bg:hover{
+    background-color: white;
+}
+
+
+
+
 
 /**********************************
 FOOTER PLAYER
@@ -218,19 +243,14 @@ HEADER SIDE BAR
 .header_nav .yellow-bar{
     margin-right: 20px;
     height: 30px;
-    background-color: yellowgreen;
     width: 1.5px;
 }
 
- .nav_text i{
+.header_nav i{
     padding-right: 10px;
     font-size: 20px;
 }
 
-.nav_cerca,
-.nav_libreria {
-    color: var(--graytext);
-}
 
 .header_playlist .playlist{
     padding: 22px;
@@ -258,7 +278,6 @@ HEADER SIDE BAR
 .playlist_crea .plus-square{
     width: 36px;
     height: 36px;
-    background-color: white;
     position: relative;
     margin-right: 8px;
     background-color: #909090;
@@ -351,6 +370,7 @@ MAIN UPGRADE
 .container-upgrade{
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .container-upgrade .row{
@@ -367,6 +387,10 @@ MAIN UPGRADE
     border: 2px solid white;
     padding: 0 42px;
     border-radius: 25px;
+}
+
+.container-upgrade .upgrade button:hover{
+    transform: scale(1.1);
 }
 
 /**********************************
@@ -402,10 +426,13 @@ main.main{
     padding: 0 10px;
 }
 
+.nav_content .nav-bar p{
+    font-family: 'Raleway', sans-serif;
+}
+
 .nav_content .nav-bar .yellow-bar{
     margin-top: 2px;
     height: 1.5px;
-    background-color: yellowgreen;
     width: 30px;
 }
 
@@ -441,6 +468,28 @@ main.main{
     row-gap: 18px;
 }
 
+.container-content .card_content .img_card{
+    position: relative;
+}
+
+.container-content .card_content .img_card i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    display: none;
+}
+
+.container-content .card_content .img_card:hover img{
+    filter: drop-shadow(16px 16px 10px black) brightness(120%)
+}
+
+.container-content .card_content .img_card:hover i{
+    display: block;
+}
+
+
 .card_content .card .text_card{
     text-align: center;
 }
@@ -469,14 +518,8 @@ MEDIA QUERY
 **********************************/
 
 
-.nav_cerca .yellow-bar,
-.nav_libreria .yellow-bar{
-    background-color: black;
-}
 
-.nav_content .none.yellow-bar{
-    background-color: var(--littledarkgray);
-}
+
 
 
 @media screen and (max-width: 950px) {
