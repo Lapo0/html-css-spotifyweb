@@ -348,6 +348,11 @@ HEADER SIDE BAR
 MAIN UPGRADE
 **********************************/
 
+.container-upgrade{
+    position: sticky;
+    top: 0;
+}
+
 .container-upgrade .row{
     align-items: center;
     height: 100%;
@@ -368,8 +373,17 @@ MAIN UPGRADE
 MAIN CONTENT
 **********************************/
 
+main.main{
+    overflow: scroll;
+    position: relative;
+}
+
 .container-content {
     color: white;
+}
+
+.container-content .nav_content{
+    padding: 0 10px;
 }
 
 .container-content .nav_content>.row{
@@ -395,6 +409,60 @@ MAIN CONTENT
     width: 30px;
 }
 
+.container-content .card_content{
+    padding: 30px 15px 0;
+}
+
+.container-content:last-child {
+    padding-bottom: 30px;
+}
+
+.container-content .card_content .card_titol{
+    margin-bottom: 25px;
+}
+
+.container-content .card_content h2{
+    font-size: 28px;
+}
+
+.container-content .card_content > .row{
+    justify-content: flex-start;
+    row-gap: 20px;
+}
+
+.container-content .card_content .row .col{
+    padding-right: calc(5px + 1vw);
+    flex-basis: calc(100% / 6);
+}
+
+.container-content .card_content .row.card{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 18px;
+}
+
+.card_content .card .text_card{
+    text-align: center;
+}
+
+.card_content .card .text_card h3{
+    font-weight: bolder;
+    padding-bottom: 10px;
+    font-size: 16px;
+}
+
+.card_content .card .text_card p{
+    font-size: 14px;
+}
+
+.container-content .card_content .card_titol p{
+    margin-top: 10px;
+}
+
+.container-content .popular .card_content .img_card img{
+    border-radius: 50%;
+}
+
 
 /**********************************
 MEDIA QUERY
@@ -411,10 +479,19 @@ MEDIA QUERY
 }
 
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .impostation-song_time .time-bar{
         margin: 0 12px;
     }
+
+    .container-content .card_content > .row{
+        flex-wrap: wrap;
+    }
+
+    .container-content .card_content .row .col{
+        flex-basis: calc(100% / 4);
+    }
+
 }
 
 @media screen and (max-width: 720px) {
@@ -447,6 +524,10 @@ MEDIA QUERY
 
     .player_style-song .style-song_volume .volume-bar {
         width: 100px;
+    }
+
+    .container-content .card_content .row .col{
+        flex-basis: calc(100% / 2);
     }
 }
 
