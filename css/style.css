@@ -237,8 +237,9 @@ FOOTER PLAYER
     background-color: green;
 }
 
-
-
+.volume-bar:hover .volume_bar_on{
+    background-color: green;
+}
 
 @keyframes progress {
     from {width: 0%;}
@@ -267,7 +268,7 @@ FOOTER PLAYER
     flex-grow: 1;
 }
 
-.style-song_volume .volume-bar .volume_bar_on{
+.volume-bar .volume_bar_on{
     height: 4px;
     background-color: white;
     border-radius: 25px;
@@ -356,6 +357,10 @@ HEADER SIDE BAR
     position: relative;
     margin-right: 8px;
     background-color: #909090;
+}
+
+.playlist_crea:hover .plus-square{
+    background-color: white;
 }
 
 .playlist_crea .plus-square i{
