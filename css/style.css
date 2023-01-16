@@ -100,19 +100,23 @@ FOOTER PLAYER
     justify-content: space-between;
     align-items: center;
     color: white;
+    padding: 15px 0;
 }
 
 .player .row{
     align-items: center;
+    gap: 12px;
 }
 
-.player_type-of-song .type-of-song_img{
-    margin-right: 12px;
+.row.song{
+    align-items: center;
 }
 
 .player_type-of-song .type-of-song_img img{
-    height: 42px;
     width: 42px;
+    aspect-ratio: 1/1;
+	object-fit: cover;
+	object-position: center;
 }
 
 .player_type-of-song .type-of-song_text{
@@ -126,20 +130,18 @@ FOOTER PLAYER
 }
 
 .player_type-of-song .type-of-song_icon{
-    margin-left: 28px;
+    flex-wrap: wrap;
+    gap: 6px 6px;
 }
 
-.player_type-of-song .type-of-song_icon >*{
-    padding: 6px;
-}
 
 .player .col-6{
-    flex-basis: 40%;
+    flex-grow: 1;
+    max-width: 50%;
 }
 
 .player_impostation-song.row{
     flex-direction: column;
-    padding-top: 12px;
 }
 
 .player_impostation-song .col-12{
@@ -153,20 +155,19 @@ FOOTER PLAYER
 
 .player_impostation-song .impostation-song_icon > i:not(.big){
     font-size: 18px;
-    padding: 0 10px;
+    padding: 0 8px;
 }
 
 .player_impostation-song .impostation-song_icon .big{
     font-size: 28px;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
-.impostation-song_time.row{
-    padding: 15px 0;
+.player_impostation-song .impostation-song_icon > i:hover{
+    transform: scale(1.2);
 }
 
 .impostation-song_time .time-bar{
-    height: 4px;
     background-color: var(--graytext);
     width: 100%;
     margin: 0 25px;
@@ -178,7 +179,33 @@ FOOTER PLAYER
     background-color: white;
     border-radius: 25px;
     animation: progress 60s linear;
+    position: relative;
 }
+
+.cerchio{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+}
+
+[class$="me-bar"]:hover .time_bar_on{
+    background-color: green;
+    height: 5px;
+}
+
+[class$="me-bar"]:hover .cerchio{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+}
+
+
 
 
 @keyframes progress {
@@ -191,28 +218,23 @@ FOOTER PLAYER
 }
 
 .player_style.col{
-    flex-shrink: 0;
-}
-
-.player_style-song i{
-    padding: 6px;
-    font-size: 13px;
+    flex-shrink: 1;
 }
 
 .player_style-song .style-song_volume .volume-bar{
     margin-left: 7px;
-    height: 4px;
     background-color: var(--graytext);
     width: 120px;
     border-radius: 25px;
 }
 
-.player_style-song .style-song_volume .volume-bar .volume_bar_on{
+.style-song_volume .volume-bar .volume_bar_on{
     height: 4px;
     background-color: white;
     border-radius: 25px;
     animation: volume 8s linear;
     animation-iteration-count: infinite;
+    position: relative;
 }
 
 @keyframes volume {
@@ -552,31 +574,15 @@ MEDIA QUERY
 }
 
 @media screen and (max-width: 720px) {
-    .player_type-of-song .type-of-song_icon {
-        margin-left: 22px;
-        width: 28px;
-    }
-
-    .player_type-of-song .type-of-song_img img {
-        height: 36px;
-        width: 36px;
-    }
+    
 
     .player_type-of-song .type-of-song_text {
         font-size: 12px;
     }
 
-    .player_type-of-song .type-of-song_icon >* {
-        font-size: 14px;
-    }
-
     .player_impostation-song .impostation-song_icon > i:not(.big) {
         font-size: 16px;
         padding: 0 9px;
-    }
-
-    .player_impostation-song .impostation-song_time {
-        padding: 15px 20px;
     }
 
     .player_style-song .style-song_volume .volume-bar {
@@ -596,36 +602,19 @@ MEDIA QUERY
     .player_type-of-song .type-of-song_text{
         font-size: 12px;
         flex-shrink: 1;
-        padding-right: 10px;
     }
 
     .player_type-of-song .type-of-song_text p:first-child {
         font-size: 13px;
     }
 
-    .player_type-of-song .type-of-song_img img {
-        height: 26px;
-        width: 26px;
-    }
-
-    .player_type-of-song .type-of-song_img {
-        margin-right: 8px;
-    }
-
     .player_type-of-song .type-of-song_icon {
         margin-left: 0;
     }
 
-    .player_impostation-song .impostation-song_icon > i:not(.big) {
-        font-size: 12px;
-    }
 
     .player_type-of-song .type-of-song_icon >* {
         padding: 2px;
-    }
-
-    .player_impostation-song .impostation-song_time {
-        padding: 15px 10px;
     }
 
     .impostation-song_time .time-bar {
