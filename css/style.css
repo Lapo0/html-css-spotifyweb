@@ -199,6 +199,20 @@ FOOTER PLAYER
     transform: scale(1.2);
 }
 
+.hover-icon .fa-volume-xmark{
+    display: none;
+    font-size: 18px;
+}
+
+.hover-icon:hover .fa-volume-xmark{
+    display: block;
+}
+
+.hover-icon:hover .fa-volume-high{
+    display: none;
+}
+
+
 .impostation-song_time .time-bar{
     background-color: var(--graytext);
     width: 100%;
@@ -210,8 +224,17 @@ FOOTER PLAYER
     height: 4px;
     background-color: white;
     border-radius: 25px;
-    animation: progress 60s linear;
     position: relative;
+    width: 0;
+}
+
+.impostation-song_time:hover .time-bar .time_bar_on{
+    animation: progress 60s linear;
+}
+
+@keyframes progress {
+    from {width: 0%;}
+    to {width: 100%;}
 }
 
 .cerchio{
@@ -222,29 +245,26 @@ FOOTER PLAYER
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid white;
     background-color: white;
 }
 
 [class$="me-bar"]:hover .time_bar_on{
-    background-color: green;
+    background-color: rgb(0, 255, 0);
     height: 5px;
 }
 
 [class$="me-bar"]:hover .cerchio{
     width: 10px;
     height: 10px;
-    background-color: green;
+    background-color: rgb(0, 255, 0);
 }
 
 .volume-bar:hover .volume_bar_on{
-    background-color: green;
+    background-color: rgb(0, 255, 0);
+    height: 5px;
 }
 
-@keyframes progress {
-    from {width: 0%;}
-    to {width: 100%;}
-}
 
 .impostation-song_time p{
     font-size: 12px;
@@ -683,7 +703,7 @@ MEDIA QUERY
         width: 50px;
         height: 50px;
         margin: 0;
-        padding: 5px 8px 0;
+        padding: 8px;
     }
 
 
@@ -698,6 +718,11 @@ MEDIA QUERY
 
     .top-side-bar .side_bar_logo .small-logo {
         display: block;
+    }
+
+    .header_nav i {
+        padding-right: 0;
+        font-size: 24px;
     }
 
 }
