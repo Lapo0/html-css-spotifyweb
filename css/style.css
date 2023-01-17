@@ -585,11 +585,11 @@ main.main{
     display: none;
 }
 
-.container-content .card_content .img_card:hover img{
+.container-content .card_content .card:hover img{
     filter: drop-shadow(16px 16px 10px black) brightness(120%)
 }
 
-.container-content .card_content .img_card:hover i{
+.container-content .card_content .card:hover i{
     display: block;
 }
 
@@ -620,10 +620,6 @@ main.main{
 /**********************************
 MEDIA QUERY
 **********************************/
-
-
-
-
 
 
 @media screen and (max-width: 950px) {
