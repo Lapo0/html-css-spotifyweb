@@ -396,6 +396,10 @@ HEADER SIDE BAR
     padding: 22px 22px 0;
 }
 
+.bottom-side-bar.row{
+    flex-direction: column;
+}
+
 .bottom-side-bar .side_bar_download .arrow-circle{
     width: 12px;
     height: 12px;
@@ -698,6 +702,17 @@ MEDIA QUERY
         display: none;
     }
 
+    .bottom-side-bar .side_bar_download::after{
+        display: none;
+    }
+
+    .bottom-side-bar.row{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        gap: 10px;
+    }
+
     .top-side-bar .side_bar_logo{
         display: block;
         width: 50px;
@@ -705,7 +720,6 @@ MEDIA QUERY
         margin: 0;
         padding: 8px;
     }
-
 
     .top-side-bar .header_nav ul {
         align-items: center;
