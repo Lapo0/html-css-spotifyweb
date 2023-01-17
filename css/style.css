@@ -659,6 +659,14 @@ MEDIA QUERY
 }
 
 @media screen and (max-width: 630px) {
+
+    
+    .container-upgrade .upgrade button {
+        line-height: 36px;
+        padding: 0 26px;
+        border-radius: 25px;
+    }
+
     .header{
         width: 50px;
     }
